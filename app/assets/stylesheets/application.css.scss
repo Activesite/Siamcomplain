@@ -1,0 +1,32 @@
+$main_font-size: 80%;
+$main_font-family:"Helvetica",Arial,San-serif;
+
+body { line-height:1;font-size: $main_font-size;font-family: $main_font-family;font-size: $main_font-size; } 
+h1{font-size:2.5em;}
+h2{font-size:1.75em;}
+h3{font-size:1.25em;}
+/*header*/
+header {
+	padding:40px 7% 30px;
+	margin-bottom:20px;
+	background:#F4F4F4;
+	hgroup{color:#464646;letter-spacing:-1px;line-height:0.2;float:left;
+		h1{font-size:4em;}
+		h2{font-size:1.5em;}
+	}
+	ul{float:right;
+		li{float:left;margin-right:10px;padding:6px 12px 4px;line-height:1.2;background-color:#9A9F9A;
+			a{text-decoration:none;color:#FFFFFF;letter-spacing:-1px;font-size:140%;font-weight:bolder;display:block;}
+		}	
+	}	
+}
+
+/*section*/
+section{
+padding :10px 7%;
+line-height:1.2;
+	
+}
+
+/*etc*/
+.clearBoth{clear:both;}

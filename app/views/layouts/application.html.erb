@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Siamcomplain</title>
+	<%= stylesheet_link_tag "reset" %>
+	<%= stylesheet_link_tag    "application" %>
+	<%= javascript_include_tag "application" %>
+	<%= javascript_include_tag "cufon" %>
+	<%= javascript_include_tag "bebas-neue.cufonfonts" %>
+	<%= csrf_meta_tags %>
+	<script type="text/javascript">
+	Cufon.replace('hgroup > h1', { fontFamily: 'Bebas Neue', hover: true }); 
+	</script>
+</head>
+<body>
+	<header>
+		<hgroup>
+			<h1>Siamcomplain</h1>
+			<h2>The Consumer Voice</h2>
+		</hgroup>
+	<nav>
+		<ul>
+			<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "Contact Us", contact_path %></li>
+			<li><%= link_to "Sign in",'#' %></li>
+			
+		</ul>
+			
+	</nav>
+	<div class="clearBoth">
+	</header>
+	<section>
+		<%= yield %>
+	</section>
+	<footer>
+
+	</footer>
+</body>
+</html>
