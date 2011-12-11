@@ -7,7 +7,7 @@ gem 'rails', '3.1.0'
 
 gem 'mysql2'
 gem 'rspec-rails'
-
+gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 
 # Gems used only for assets and not required
 # in production environments by default.

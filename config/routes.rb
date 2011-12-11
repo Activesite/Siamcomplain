@@ -1,5 +1,9 @@
 Siamcomplain::Application.routes.draw do
 
+  get "users/new"
+
+  get "users/show"
+
 match 'contact/' => 'pages#contactUs'
 root :to => 'pages#home'
 
