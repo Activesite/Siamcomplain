@@ -28,6 +28,12 @@ describe User do
             invalid_email_address.should_not be_valid
         end
     end
+    it "should reject the duplicate uppercase account" do
+        upercase_account = @attr[:email].upcase
+        User.create!(@attr.merge(:email => upercase_account ))
+        duplicate_email_account = User.new(@attr)
+        duplicate_email_account.should_not be_valid
+    end
 end
 # == Schema Information
 #
