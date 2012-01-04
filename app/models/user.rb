@@ -34,7 +34,7 @@ class User < ActiveRecord::Base
     
     #self.[method_name] is static method in rail
     def self.authentication(email,submitted_password)
-        #find_by_email are  inherit methond in the active_record class
+        #find_by_email are  inherit method in the active_record class
         #rails implicit create object
         user = find_by_email(email)
         return nil if user.nil?

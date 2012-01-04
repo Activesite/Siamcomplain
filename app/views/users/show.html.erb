@@ -1,3 +1,5 @@
-<h1>Users#show</h1>
-<p><%= @user.name %>,<%= @user.email %></p>
+<h1>
+	<%= gravatar_image_tag @user.email %>
+	<%= @user.name %>
+</h1>
 
