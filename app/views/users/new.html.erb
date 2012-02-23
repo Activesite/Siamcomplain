@@ -2,7 +2,7 @@
 <%= form_for @user do |f| %>
 <%= render 'shared/error_messages' %>
   <div class="field">
-  	<%= f.label :name, "Name" %>
+  <%= f.label :name, "Name" %>
 	<%= f.text_field :name %>	
   </div>
   <div class="field">
@@ -22,4 +22,3 @@
 	<%= f.submit "Sign up" %>
 </div>
 <% end %>
-
