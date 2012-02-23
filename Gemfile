@@ -6,7 +6,8 @@ gem 'rails', '3.1.0'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-
+gem 'rspec-rails'
+gem 'gravatar_image_tag' , '0.1.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -30,4 +31,6 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'factory_girl_rails' , '1.0'
+  gem 'webrat'
 end
