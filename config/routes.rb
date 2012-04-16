@@ -1,6 +1,8 @@
 Siamcomplain::Application.routes.draw do
+  
   get "sessions/new"
-
+    resources :pages
+    resources :articles
     resources :users
     resources :sessions, :only => [:new , :create,:destroy]     
     match '/signup',  :to => "users#new" 

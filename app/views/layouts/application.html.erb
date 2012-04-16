@@ -2,41 +2,39 @@
 <html>
 <head>
 	<title><%=@title%></title>
-	<%= stylesheet_link_tag "reset" %>
-	<%= stylesheet_link_tag    "application" %>
+	<%= stylesheet_link_tag  "application" %>
 	<%= javascript_include_tag "application" %>
 	<%= javascript_include_tag "cufon" %>
-	<%= javascript_include_tag "bebas-neue.cufonfonts" %>
 	<%= csrf_meta_tags %>
-	<script type="text/javascript">
-	Cufon.replace('hgroup > h1', { fontFamily: 'Bebas Neue', hover: true }); 
-	</script>
 </head>
 <body>
+<section id="header">	
 	<header>
 		<hgroup>
 			<h1>Siamcomplain</h1>
 			<h2>The Consumer Voice</h2>
 		</hgroup>
+	</header>
 	<nav>
 		<ul>
 			<li><%= link_to "Home", root_path %></li>
 			<li><%= link_to "Contact Us", contact_path %></li>
-			<li><%= link_to "Sign in", new_user_path %></li>
-			
+			<li><%= link_to "Sign in", new_session_path %></li>
+			<div class="clearBoth"/>
 		</ul>
-			
 	</nav>
-	<div class="clearBoth">
-	</header>
-	<section>
-	<% flash.each do |key,value| %>
+	<div class="clearBoth"/>
+</section>
+<div class="clearBoth"></div>
+<section id="content">
+		<% flash.each do |key,value| %>
 	 <div class="flash<%= key %>"><%= value %></div>
 	 <% end %>
 		<%= yield %>
-	</section>
-	<footer>
+</section>
+<br class="clearBoth"/>
+<footer>
 		<%= debug(params) if Rails.env.development? %>
-	</footer>
+</footer>
 </body>
 </html>

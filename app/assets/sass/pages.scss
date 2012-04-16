@@ -1,0 +1,64 @@
+@import "blueprint";
+$default-text-shadow-color: #cecece;
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 3px;
+
+@import "blueprint/liquid";
+@import "compass/css3/border-radius";
+@import "compass/css3/text-shadow";
+
+
+div#menuArticle{
+@include column(24);
+@include append-bottom(1em);
+@include last;
+	div#searchArea{
+		@include column(7);
+
+	}
+	div#buttonArea{
+	@include column(6);
+	@include last;
+	@include prepend(10);
+	@include append(1);
+
+	}
+}
+section#recentArticles{
+@include column(24);
+@include last;
+@include append-bottom(1em);
+	h2{
+		@include text-shadow;
+		margin-bottom: 0.5em;
+
+
+	}
+}
+
+article{
+	width:20%;
+	padding:20px 1%;
+	margin-bottom: 2em;
+	margin-right:2.55%;
+	float:left;
+	height:100px;
+	background-color:#EEEEEE;
+	@include border-radius(4px, 4px);
+	border: 1px solid #CECECE;
+		header{
+			h4{
+			margin-bottom: 5px;
+			}
+		}
+		p{
+			font-size: 110%;
+			line-height: 1.3;
+		}
+}
+div.articleWrapper article{
+
+
+
+
+}

@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.4'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -8,10 +8,11 @@ gem 'rails', '3.1.0'
 gem 'mysql2'
 gem 'rspec-rails'
 gem 'gravatar_image_tag' , '0.1.0'
-
+gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'compass-rails'
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'

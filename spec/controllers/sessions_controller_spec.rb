@@ -11,7 +11,6 @@ describe SessionsController do
     it "should have the right title" do
 		get :new
     	response.should have_selector{"title",:content => "Sign in"}
-	end
+	  end
   end
-
 end
