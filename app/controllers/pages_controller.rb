@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
-  	@article = Article.all; 
+  	@article = Article.all;
+  	@title = "Siamcomplain Community" 
   	
   end
 

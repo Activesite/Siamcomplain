@@ -1,8 +1,72 @@
-/* line 4, ../sass/pages.scss */
-div#addArticle {
+/* line 11, ../sass/pages.scss */
+div#menuArticle {
   display: inline;
   float: left;
   overflow: hidden;
   width: 99.974%;
   margin-right: 1.042%;
+  margin-bottom: 1em;
+  margin-right: 0;
+}
+/* line 15, ../sass/pages.scss */
+div#menuArticle div#searchArea {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 28.421%;
+  margin-right: 1.042%;
+}
+/* line 19, ../sass/pages.scss */
+div#menuArticle div#buttonArea {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 28.421%;
+  margin-right: 1.042%;
+  margin-right: 0;
+  padding-left: 42.09%;
+}
+
+/* line 26, ../sass/pages.scss */
+section#recentArticles {
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 99.974%;
+  margin-right: 1.042%;
+  margin-right: 0;
+  margin-bottom: 1em;
+}
+/* line 30, ../sass/pages.scss */
+section#recentArticles h2 {
+  text-shadow: #cecece 0px 3px 3px;
+  margin-bottom: 0.5em;
+}
+
+/* line 38, ../sass/pages.scss */
+article {
+  width: 20%;
+  padding: 20px 1%;
+  margin-bottom: 2em;
+  margin-right: 2.55%;
+  float: left;
+  height: 120px;
+  background-color: #EEEEEE;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  -ms-border-radius: 4px / 4px;
+  -o-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+  border: 1px solid #CECECE;
+}
+/* line 49, ../sass/pages.scss */
+article header h4 a {
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #333;
+}
+/* line 55, ../sass/pages.scss */
+article p {
+  font-size: 110%;
+  line-height: 1.3;
 }

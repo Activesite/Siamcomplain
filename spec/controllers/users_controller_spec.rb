@@ -55,8 +55,9 @@ describe UsersController do
             response.should render_template('new')
         end
         it "should have a welcome message" do
+            @attr = {:name => "test",:email => "test@test.com",:password => "testtest", :password_confirmation => "testtest" }
             post :create,:user => @attr 
-            flash[:success].should =~ /Welcome to the Sample App!/i
+            flash[:success].should =~ /Welcome to the Sample App/i
         end
     end 
 end

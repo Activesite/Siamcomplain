@@ -8,21 +8,14 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-<section id="header">	
-	<header>
+<section id='header'>	
+	<%= link_to raw('<header>
 		<hgroup>
 			<h1>Siamcomplain</h1>
 			<h2>The Consumer Voice</h2>
 		</hgroup>
-	</header>
-	<nav>
-		<ul>
-			<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "Contact Us", contact_path %></li>
-			<li><%= link_to "Sign in", new_session_path %></li>
-			<div class="clearBoth"/>
-		</ul>
-	</nav>
+	</header>'),root_path %>
+<%= render 'layouts/header' %>
 	<div class="clearBoth"/>
 </section>
 <div class="clearBoth"></div>
@@ -31,6 +24,7 @@
 	 <div class="flash<%= key %>"><%= value %></div>
 	 <% end %>
 		<%= yield %>
+		<br class="clearBoth"/>
 </section>
 <br class="clearBoth"/>
 <footer>

@@ -1,6 +1,6 @@
 Siamcomplain::Application.routes.draw do
-  
-  get "sessions/new"
+
+    resources :comments
     resources :pages
     resources :articles
     resources :users
@@ -8,7 +8,7 @@ Siamcomplain::Application.routes.draw do
     match '/signup',  :to => "users#new" 
     match '/signin',  :to => "sessions#new"
     match '/signout', :to => "sessions#destroy"
-
+    match '/home', :to => "pages#home"
 
 
 match 'contact/' => 'pages#contactUs'

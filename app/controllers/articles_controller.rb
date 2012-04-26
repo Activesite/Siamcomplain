@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
 	def show
       @article = Article.find(params[:id])
+      @current_comments = @article.comments
       @title = @article.articleTitle
   	end
 	def new
@@ -19,6 +20,4 @@ class ArticlesController < ApplicationController
 	def destroy
 			Article.find(params[:id]).destroy
 			redirect_to root_path
-		
-	end
-end
+ 	end end

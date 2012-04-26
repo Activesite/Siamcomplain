@@ -69,13 +69,14 @@ section#header {
 }
 /*content*/
 section#content{
-	@include column(23);
+	@include column(22);
 	@include prepend(1);
+	@include append(1);
 	@include last;
 }
 /* Article */
 article{
-	@include column(24);
+	
 }
 div.articleWrapper{
 
@@ -89,7 +90,16 @@ line-height:1.2;
 }
 
 /*etc*/
+form{
+
+}
 input[type="text"]{
+	height:22px;
+	font-size: 14px;
+	border: 1px solid #D5D2D2;
+	@include border-radius(2px,2px);
+}
+input[type="text"].search{
 	padding-left: 10px;
 	width: 90%;
 	height:42px;

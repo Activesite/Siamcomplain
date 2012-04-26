@@ -17,10 +17,9 @@ div#menuArticle{
 
 	}
 	div#buttonArea{
-	@include column(6);
+	@include column(7);
 	@include last;
 	@include prepend(10);
-	@include append(1);
 
 	}
 }
@@ -42,13 +41,15 @@ article{
 	margin-bottom: 2em;
 	margin-right:2.55%;
 	float:left;
-	height:100px;
+	height:120px;
 	background-color:#EEEEEE;
 	@include border-radius(4px, 4px);
 	border: 1px solid #CECECE;
 		header{
-			h4{
+			h4 a{
 			margin-bottom: 5px;
+			text-decoration: none;
+			color: #333;
 			}
 		}
 		p{

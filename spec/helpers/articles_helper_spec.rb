@@ -10,6 +10,19 @@ require 'spec_helper'
 #     end
 #   end
 # end
+class TestStub
+end
 describe ArticlesHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+	before(:each) do
+  		@stub = TestStub.new
+  		@stub.extend(ArticlesHelper)
+  		@testText = "Saran Yamasathien"
+	end
+
+	describe "text_shorten" do
+		it "should shorten text" do
+   			@stub.text_shorten(@testText,10).length.should == 10
+  		end
+	end
 end

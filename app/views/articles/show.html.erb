@@ -1,1 +1,24 @@
-<%= @title %>
+<%= stylesheet_link_tag "articles" %>
+<!-- article section -->
+<section id="article">
+  <article>
+    <header>
+      <h3><%= @article.articleTitle %></h3>
+      <span>By <%= @article.user.name %> on 
+        <time datetime="<%= @article.created_at %>" pubdate="pubdate"><%= @article.created_at.to_formatted_s(:short) %></time></span>
+    </header>
+    <p><%= @article.articleContent %></p>
+  </article>
+</section>
+<!-- comment section -->
+<%= raw (current_comment(@current_comments))%>
+<!-- post section -->
+<section id="post">
+  <% if signed_in?%>
+
+    <%= form_for(:comments, :url => comments_path) do |f| %>
+        <%= f.text_field :commentContent ,:placeholder => "complain....",  :autofocus => "autofocus"  %>
+        <%= f.hidden_field(:article_id,:value=>@article.id) %>
+    <% end %>
+  <%end%>
+</section>

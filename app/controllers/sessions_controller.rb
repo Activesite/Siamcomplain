@@ -10,12 +10,15 @@ class SessionsController < ApplicationController
 		@title = "sign in"
 		render 'new'
 	else
+    # this will create token and @current_user
+    sign_in(user)
 		redirect_to user
 	end
   	
   end
   def destroy
-  	
+    sign_out
+    redirect_to root_path
   end
 
 end

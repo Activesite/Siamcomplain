@@ -1,0 +1,95 @@
+/* line 3, ../sass/articles.scss */
+section#article article {
+  border: 1px solid #D1DCE4;
+  background-color: #FFFFFF;
+  margin-bottom: 10px;
+  padding: 14px 14px 10px 18px;
+  width: 75%;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  -ms-border-radius: 4px / 4px;
+  -o-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+}
+/* line 11, ../sass/articles.scss */
+section#article article header {
+  margin-bottom: 10px;
+  line-height: 1;
+}
+/* line 15, ../sass/articles.scss */
+section#article article header h3 {
+  font-weight: bold;
+}
+/* line 20, ../sass/articles.scss */
+section#article article p {
+  line-height: 1.4;
+  font-size: 110%;
+}
+
+/* line 29, ../sass/articles.scss */
+section#comments article {
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  -ms-border-radius: 4px / 4px;
+  -o-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+  line-height: 1.35;
+  border: 1px solid #D1DCE4;
+  background-color: #F0F3F8;
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  width: 50%;
+}
+/* line 38, ../sass/articles.scss */
+section#comments article img {
+  float: left;
+  margin-right: 10px;
+}
+/* line 42, ../sass/articles.scss */
+section#comments article span.commentName {
+  font-weight: bold;
+}
+/* line 45, ../sass/articles.scss */
+section#comments article p {
+  margin-left: 50px;
+}
+/* line 48, ../sass/articles.scss */
+section#comments article footer {
+  float: right;
+}
+/* line 50, ../sass/articles.scss */
+section#comments article footer date {
+  font-weight: bold;
+}
+
+/* line 57, ../sass/articles.scss */
+section#post form {
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  -ms-border-radius: 4px / 4px;
+  -o-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+  line-height: 2;
+  border: 1px solid #D1DCE4;
+  background-color: #F0F3F8;
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  width: 50%;
+}
+/* line 65, ../sass/articles.scss */
+section#post form input[type="text"] {
+  padding-left: 1%;
+  width: 99%;
+  height: 22px;
+  font-size: 14px;
+  border: 1px solid #D5D2D2;
+  -webkit-border-radius: 2px 2px;
+  -moz-border-radius: 2px / 2px;
+  -ms-border-radius: 2px / 2px;
+  -o-border-radius: 2px / 2px;
+  border-radius: 2px / 2px;
+}
+/* line 73, ../sass/articles.scss */
+section#post form div.field {
+  margin-bottom: 10p;
+}
