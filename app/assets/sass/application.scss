@@ -1,0 +1,140 @@
+@import "partials/base";
+
+html { font:$font; } 
+body{
+	
+}
+h1,h2,h3,h4,h5,h6{
+	letter-spacing: -1px;
+}
+h1{
+	font-size: 2.5em;
+}
+h2{
+	font-size: 2.3em;
+}
+h3{
+	font-size: 2.1em;
+}
+h4{
+	font-size: 1.9em;
+}
+h5{
+	font-size: 1.7em;}
+h6{font-size: 1.5em;}
+/*header*/
+section#header {
+	background:#F4F4F4;
+	@include box-shadow;
+	@include append-bottom(2em);
+	@include column(23);
+	@include prepend(1);
+	@include last;
+	header{
+		@include column(16);
+		color:#464646;
+		letter-spacing:-1px;
+		hgroup{
+			padding:20px 0px;
+			h1{font-size:4em;}
+			h2{font-size:1.5em;margin-top: -10px;}
+		}
+
+		
+	}
+	nav{
+		
+		@include column(7);
+		@include last;
+		@include append(1);
+		ul{
+			margin-top: 20px;
+			li{	
+				margin-left:10px;
+				margin-bottom: 10px;
+				float:right;
+				line-height:1.2;
+				background-color:#9A9F9A;
+				a{text-decoration:none;
+					text-align: center;
+					color:#FFFFFF;
+					padding:7px 10px;
+					letter-spacing:-1px;
+					font-size:1.4em;
+					font-weight:bolder;
+					display:block;}
+			}	
+		}
+	}	
+}
+/*content*/
+section#content{
+	@include column(22);
+	@include prepend(1);
+	@include append(1);
+	@include last;
+}
+/* Article */
+article{
+	
+}
+div.articleWrapper{
+
+
+}
+/*section*/
+section{
+
+line-height:1.2;
+	
+}
+
+/*etc*/
+form{
+
+}
+input[type="text"]{
+	height:22px;
+	font-size: 14px;
+	border: 1px solid #D5D2D2;
+	@include border-radius(2px,2px);
+}
+input[type="text"].search{
+	padding-left: 10px;
+	width: 90%;
+	height:42px;
+	font-size: 14px;
+	border: 1px solid #D5D2D2;
+	@include border-radius(2px,2px);
+}
+div.searchButton{
+	@include border-radius(4px, 4px);
+	float: right;
+	margin-right: 15px;
+	background-color: #1D74C4;
+	border: 3px solid #80b2dd;
+	padding:10px 20px;
+	cursor: pointer;
+	a{
+		text-decoration:none;
+		color:white;
+		font-size: 1.5em;
+	}
+}
+div.addButton{
+	@include border-radius(8px, 8px);
+
+	float: right;
+	background-color: #db3434;
+	border: 3px solid #d88a8a;
+	padding:10px 20px;
+	cursor: pointer;
+	a{
+		text-decoration:none;
+		color:white;
+		font-size: 1.5em;
+	}
+}
+.clearBoth{clear:both;}
+/* iphone */
+

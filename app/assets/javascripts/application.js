@@ -7,3 +7,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+Cufon.set('fontFamily', 'Bebas Neue').replace('hgroup > h1');
+

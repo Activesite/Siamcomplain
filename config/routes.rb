@@ -1,7 +1,14 @@
 Siamcomplain::Application.routes.draw do
-    resources :users
- 
 
+    resources :comments
+    resources :pages
+    resources :articles
+    resources :users
+    resources :sessions, :only => [:new , :create,:destroy]     
+    match '/signup',  :to => "users#new" 
+    match '/signin',  :to => "sessions#new"
+    match '/signout', :to => "sessions#destroy"
+    match '/home', :to => "pages#home"
 
 
 match 'contact/' => 'pages#contactUs'
@@ -10,8 +17,6 @@ root :to => 'pages#home'
 
 
   # The priority is based upon order of creation:
-  # first created -> highest priority.
-
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

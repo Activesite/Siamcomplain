@@ -1,0 +1,19 @@
+<h1>Create Article</h1>
+<%= form_for(:article, :url => articles_path) do |f| %>
+  <div class="field">
+    <%= f.label :userName %><br/>
+    <%= f.text_field :userName %>
+  </div>
+  <div class="field">
+  	<%= f.label :articleTitle %><br/>
+  	<%= f.text_field :articleTitle %>
+  </div>
+  <div class="field">
+  	<%= f.label :articleContent %><br/>
+  	<%= f.text_field :articleContent %>
+  	
+  </div>
+  <div class="field">
+  	<%= f.submit "Create" %>
+  </div>
+<% end %>

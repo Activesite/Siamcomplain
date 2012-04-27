@@ -2,41 +2,33 @@
 <html>
 <head>
 	<title><%=@title%></title>
-	<%= stylesheet_link_tag "reset" %>
-	<%= stylesheet_link_tag    "application" %>
+	<%= stylesheet_link_tag  "application" %>
 	<%= javascript_include_tag "application" %>
 	<%= javascript_include_tag "cufon" %>
-	<%= javascript_include_tag "bebas-neue.cufonfonts" %>
 	<%= csrf_meta_tags %>
-	<script type="text/javascript">
-	Cufon.replace('hgroup > h1', { fontFamily: 'Bebas Neue', hover: true }); 
-	</script>
 </head>
 <body>
-	<header>
+<section id='header'>	
+	<%= link_to raw('<header>
 		<hgroup>
 			<h1>Siamcomplain</h1>
 			<h2>The Consumer Voice</h2>
 		</hgroup>
-	<nav>
-		<ul>
-			<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "Contact Us", contact_path %></li>
-			<li><%= link_to "Sign in", new_user_path %></li>
-			
-		</ul>
-			
-	</nav>
-	<div class="clearBoth">
-	</header>
-	<section>
-	<% flash.each do |key,value| %>
+	</header>'),root_path %>
+<%= render 'layouts/header' %>
+	<div class="clearBoth"/>
+</section>
+<div class="clearBoth"></div>
+<section id="content">
+		<% flash.each do |key,value| %>
 	 <div class="flash<%= key %>"><%= value %></div>
 	 <% end %>
 		<%= yield %>
-	</section>
-	<footer>
+		<br class="clearBoth"/>
+</section>
+<br class="clearBoth"/>
+<footer>
 		<%= debug(params) if Rails.env.development? %>
-	</footer>
+</footer>
 </body>
 </html>

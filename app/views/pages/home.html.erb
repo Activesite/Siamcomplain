@@ -1,2 +1,31 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= stylesheet_link_tag "pages" %>
+<div id="menuArticle">
+	<div id="searchArea">	
+<%= text_field_tag 'search', nil, :placeholder => 'Enter search item...',:class => "search", %>
+	</div>
+	<div id="buttonArea">	
+		<% if signed_in? %>
+		<div class="addButton">
+			<%= link_to "+ Complain" , new_article_path %>
+		</div>
+		<% end %>
+	</div>
+
+</div>
+
+<section id="recentArticles">
+	<h2>Recent Complain</h2>
+	<% @article.each do |record| %>
+		<article>
+				<% if signed_in? && (record.user.name == current_user.name) %>	
+				<%= link_to "delete",article_path(:id=> record.id), :method => :delete , :confirm => "You sure?",
+					:title => "Delete #{record.articleTitle}" %>
+					<% end %>
+			<header>
+				<h4><%= link_to record.articleTitle , article_path(:id => record.id)  %></h4>
+			</header>
+			<p><%= text_shorten(record.articleContent,100) %></p>
+			<span><%= record.user.name %></span>
+		</article>			
+	<% end %>
+</section>
