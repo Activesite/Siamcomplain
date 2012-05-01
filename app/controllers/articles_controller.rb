@@ -8,14 +8,15 @@ class ArticlesController < ApplicationController
 		@title = "Create Record"
 	end
 	def create
-		
-		@article = Article.new(params[:article])
+		if signed_in?
+		@article =	current_user.articles.build(params[:article])
 	      if @article.save
 	          redirect_to :controller => "pages" ,:action => "home"
 	      else
 	          @title = "Add Complain"
 	          render 'new'
 	      end
+	  end
 	end
 	def destroy
 			Article.find(params[:id]).destroy

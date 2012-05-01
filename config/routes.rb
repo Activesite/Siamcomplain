@@ -1,5 +1,9 @@
 Siamcomplain::Application.routes.draw do
 
+  get "vote_comments/new"
+
+    resources :vote_articles
+    resources :vote_comments
     resources :comments
     resources :pages
     resources :articles
@@ -9,7 +13,13 @@ Siamcomplain::Application.routes.draw do
     match '/signin',  :to => "sessions#new"
     match '/signout', :to => "sessions#destroy"
     match '/home', :to => "pages#home"
-
+    #vote article
+    match '/vote_articles_up',:to => "vote_articles#up",:via => :post  
+    match '/vote_articles_down',:to => "vote_articles#down",:via => :post
+    match '/vote_articles_de_vote',:to => "vote_articles#de_vote",:via => :post
+    #vote comment
+    match '/vote_comments_up',:to => "vote_comments#up",:via => :post  
+    match '/vote_comments_down',:to => "vote_comments#down",:via => :post
 
 match 'contact/' => 'pages#contactUs'
 root :to => 'pages#home'

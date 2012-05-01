@@ -1,0 +1,9 @@
+<% if not_voted_comment?(comment) %>
+<%= link_to "+1", {:controller => "vote_comments", :action => "up", :voted_comment => comment },:method => :post%>
+<%= link_to "-1", {:controller => "vote_comments", :action => "down", :voted_comment => comment },:method => :post%>
+<%# elsif voted_up?(@comment) %>
+<%#= link_to "-1", 		{:controller => "vote_comments", :action => "down", :voted_comment => @comment },:method => :post%>
+
+<%# elsif voted_down?(@comment) %>
+<%#= link_to "+1", 		{:controller => "vote_comments", :action => "up", :voted_comment => @comment },:method => :post%>
+<% end %>

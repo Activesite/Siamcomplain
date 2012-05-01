@@ -1,0 +1,3 @@
+class Vote
+
+end

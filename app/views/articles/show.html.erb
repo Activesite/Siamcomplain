@@ -2,8 +2,11 @@
 <!-- article section -->
 <section id="article">
   <article>
+    <%= render 'shared/vote_article' %>
     <header>
-      <h3><%= @article.articleTitle %></h3>
+      <h3><%= @article.articleTitle %> <%= @article.score.to_i %></h3>
+            
+
       <span>By <%= @article.user.name %> on 
         <time datetime="<%= @article.created_at %>" pubdate="pubdate"><%= @article.created_at.to_formatted_s(:short) %></time></span>
     </header>
@@ -11,14 +14,18 @@
   </article>
 </section>
 <!-- comment section -->
-<%= raw (current_comment(@current_comments))%>
+
+<section id="comments">
+  <%= render :partial => 'shared/comment_item',:collection => @current_comments %>
+</section>
 <!-- post section -->
 <section id="post">
   <% if signed_in?%>
 
     <%= form_for(:comments, :url => comments_path) do |f| %>
         <%= f.text_field :commentContent ,:placeholder => "complain....",  :autofocus => "autofocus"  %>
-        <%= f.hidden_field(:article_id,:value=>@article.id) %>
+        <section id="comment">
+          <%= f.hidden_field(:article_id,:value=>@article.id) %></section>
     <% end %>
   <%end%>
 </section>

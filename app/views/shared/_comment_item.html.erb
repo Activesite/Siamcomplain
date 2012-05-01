@@ -1,0 +1,18 @@
+
+<%= render :partial =>'shared/vote_comment', :locals => {:comment => comment_item }  %>
+<article>
+	<%=gravatar_for(comment_item.user,:size => 40) %>
+	<span class='commentName'>
+		<%= comment_item.user.name %> : 
+	</span>
+    <p class='content'>
+    	<%= comment_item.commentContent %>
+    </p>
+    <footer>
+    	vote : <%= comment_item.score %>
+    	@ <date>
+    		<%=comment_item.created_at.to_formatted_s(:short) %>
+    	</date>
+    </footer>
+    <div class='clearBoth'/>
+</article>

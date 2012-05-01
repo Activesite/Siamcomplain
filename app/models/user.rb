@@ -14,6 +14,8 @@
 class User < ActiveRecord::Base
     has_many :articles
     has_many :comments
+    has_many :vote_articles
+    has_many :vote_comments
     attr_accessor(:password)
     attr_accessible(:name,:email,:password,:password_confirmation)
     

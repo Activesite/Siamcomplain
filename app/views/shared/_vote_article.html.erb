@@ -1,0 +1,9 @@
+<% if not_voted_article?(@article) %>
+<%= link_to "+1", {:controller => "vote_articles", :action => "up", :voted_article => @article },:method => :post%>
+<%= link_to "-1", {:controller => "vote_articles", :action => "down", :voted_article => @article },:method => :post%>
+<%# elsif voted_up?(@article) %>
+<%#= link_to "-1", 		{:controller => "vote_articles", :action => "down", :voted_article => @article },:method => :post%>
+
+<%# elsif voted_down?(@article) %>
+<%#= link_to "+1", 		{:controller => "vote_articles", :action => "up", :voted_article => @article },:method => :post%>
+<% end %>
